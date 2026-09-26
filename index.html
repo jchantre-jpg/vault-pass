@@ -11,19 +11,23 @@
   <main class="card">
     <p class="kicker">Seguridad práctica</p>
     <h1>Vault Pass</h1>
-    <p class="sub">Genera contraseñas fuertes y mide su fortaleza al instante.</p>
+    <p class="sub">Genera contraseñas fuertes con <code>crypto.getRandomValues</code>, mide fortaleza y entropía.</p>
     <div class="output">
       <code id="password">••••••••••••</code>
       <button type="button" id="copy">Copiar</button>
     </div>
     <div class="meter"><div id="bar"></div></div>
     <p class="strength" id="strengthLabel">—</p>
-    <label class="row">Longitud <input id="len" type="range" min="8" max="48" value="16" /><span id="lenVal">16</span></label>
+    <p class="entropy" id="entropy">Entropía: —</p>
+    <label class="row">Longitud <input id="len" type="range" min="8" max="64" value="20" /><span id="lenVal">20</span></label>
     <label class="check"><input id="upper" type="checkbox" checked /> Mayúsculas</label>
     <label class="check"><input id="lower" type="checkbox" checked /> Minúsculas</label>
     <label class="check"><input id="nums" type="checkbox" checked /> Números</label>
     <label class="check"><input id="syms" type="checkbox" checked /> Símbolos</label>
+    <label class="check"><input id="ambiguous" type="checkbox" /> Evitar ambiguos (O/0, l/1)</label>
     <button type="button" class="primary" id="gen">Generar nueva</button>
+    <h2 class="hist-title">Historial local (solo esta sesión)</h2>
+    <ul id="history" class="history"></ul>
   </main>
   <script src="app.js"></script>
 </body>
