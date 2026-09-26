@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vault Pass</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="card">
+    <p class="kicker">Seguridad práctica</p>
+    <h1>Vault Pass</h1>
+    <p class="sub">Genera contraseñas fuertes y mide su fortaleza al instante.</p>
+    <div class="output">
+      <code id="password">••••••••••••</code>
+      <button type="button" id="copy">Copiar</button>
+    </div>
+    <div class="meter"><div id="bar"></div></div>
+    <p class="strength" id="strengthLabel">—</p>
+    <label class="row">Longitud <input id="len" type="range" min="8" max="48" value="16" /><span id="lenVal">16</span></label>
+    <label class="check"><input id="upper" type="checkbox" checked /> Mayúsculas</label>
+    <label class="check"><input id="lower" type="checkbox" checked /> Minúsculas</label>
+    <label class="check"><input id="nums" type="checkbox" checked /> Números</label>
+    <label class="check"><input id="syms" type="checkbox" checked /> Símbolos</label>
+    <button type="button" class="primary" id="gen">Generar nueva</button>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
